@@ -1,6 +1,9 @@
+import models.Party;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 /**
  * Created by spunek on 8/4/17.
@@ -36,11 +39,11 @@ public class App {
                                     "full course, light meal, snacks.");
                         }
                     }
-                    System.out.println("Please choose one of the options for beverages: ull bar, light refreshments, water");
+                    System.out.println("Please choose one of the options for beverages: full bar, light refreshments, water");
                     boolean checkBeverage = true;
-                    while(checkBeverage) {
+                    while (checkBeverage) {
                         beverages = bufferedReader.readLine().toLowerCase();
-                        if(beverages.equals("full bar") || beverages.equals("light refreshments") || beverages.equals("water")){
+                        if (beverages.equals("full bar") || beverages.equals("light refreshments") || beverages.equals("water")) {
                             checkBeverage = false;
                         } else {
                             System.out.println("Sorry, we don't recognize your input. Please enter one of the following: " +
@@ -48,11 +51,19 @@ public class App {
                         }
                     }
                     System.out.println("Please choose one of the following for your entertainment service: live band, DJ, none");
-                    
-
+                    boolean checkEntertainment = true;
+                    while (checkEntertainment) {
+                        entertainment = bufferedReader.readLine().toLowerCase();
+                        if (entertainment.equals("dj") || entertainment.equals("live band") || entertainment.equals("none")) {
+                            checkEntertainment = false;
+                        } else {
+                            System.out.println("Sorry, we don't recognize your input. Please enter one of the " +
+                                    "following: live band, DJ, none.");
+                        }
+                    }
                 }
-
             }
+
         }
         catch (IOException e){
             e.printStackTrace();
