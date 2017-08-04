@@ -19,7 +19,7 @@ public class PartyTest {
     @Test
     public void runTest_calculateCost_3250() throws Exception {
         Party testParty = new Party(10, "full course" , "full bar" , "live band");
-        assertEquals(3250, testParty.calculateCost());
+        assertEquals(3500, testParty.calculateCost());
 
 
     }
