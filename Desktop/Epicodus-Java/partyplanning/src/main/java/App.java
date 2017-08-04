@@ -19,7 +19,7 @@ public class App {
         String entertainment = "";
         boolean mainAppRunning = true;
 
-        System.out.println("Hello EveryOne. Welcome to PDX Party! Want to have free Quote for Party? We can arrange party as per " +
+        System.out.println("Hello EveryOne! Welcome to PDX Party! Want to have free Quote for Party? We can arrange party as per " +
                 "your choice. Answer these Questions. Would you like us to have party for you? YES or NO");
 
         try {
@@ -60,11 +60,48 @@ public class App {
                             System.out.println("Sorry, we don't recognize your input. Please enter one of the " +
                                     "following: live band, DJ, none.");
                         }
+
+                    } mainAppRunning = false;
+                } else if (userAnswer.equals("YES")) {
+                        boolean programRunning = true;
+                        while (programRunning) {
+                            Random randomGenerator = new Random();
+                            String[] foodArray = {"full course", "light meal", "snack"};
+                            String[] beverageArray = {"full bar", "light refreshments", "water"};
+                            String[] entertainmentArray = {"live band", "DJ", "none"};
+                            guests = randomGenerator.nextInt(100) + 1;
+                            food = foodArray[randomGenerator.nextInt(3)];
+                            beverages = beverageArray[randomGenerator.nextInt(3)];
+                            entertainment = entertainmentArray[randomGenerator.nextInt(3)];
+                            System.out.println(String.format("Here are the details for your party: Number of guests: %d, " +
+                                    "Food Service: %s, Beverage Service: %s, Entertainment: %s. Would you like to create a " +
+                                    "new party or see the cost estimate for this party? Enter one of the following options: " +
+                                    "New Party or See Cost", guests, food, beverages, entertainment));
+                            boolean checkOption = true;
+                            while (checkOption) {
+                                String optionForUser = bufferedReader.readLine().toLowerCase();
+                                if (optionForUser.equals("new party")) {
+                                    checkOption = false;
+                                } else if (optionForUser.equals("see cost")) {
+                                    programRunning = false;
+                                    checkOption = false;
+                                } else {
+                                    System.out.println("Sorry, We don't recognize your input. Please enter New Party or See Cost.");
+                                }
+                            }
+                        }
+                        mainAppRunning = false;
+                    } else {
+                        System.out.println("Sorry, We don't recognize your input. Please enter YES or NO.");
                     }
                 }
+                Party party = new Party(guests, food, beverages, entertainment);
+                int cost = party.calculateCost();
+                System.out.println(String.format("Total cost for your party would be $%d.", cost));
+
             }
 
-        }
+
         catch (IOException e){
             e.printStackTrace();
         }
