@@ -1,0 +1,54 @@
+body {
+  background-color: #003300;
+  color: white;
+  text-align: center;
+}
+
+#bat {
+  width: auto;
+  height: 50px;
+}
+
+#bouncing {
+  width:100%;
+  height:30%;
+  border-style: solid;
+  border-width: 50px 1px 0px 1px;
+  border-color: #3c3c3c;
+}
+
+#inputNumber {
+  color: red;
+}
+
+.seeoutput li {
+  list-style-type: none;
+}
+
+.Rules {
+  display: none;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.Rules h3 {
+  color: #922B21;
+}
+
+.Rules p {
+  color: yellow;
+}
+
+.About {
+  display: none;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.About h3 {
+  color: #922B21;
+}
+
+.About h4 {
+  color: Yellow;
+}

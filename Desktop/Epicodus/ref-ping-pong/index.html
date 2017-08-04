@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>PING PONG</title>
+  </head>
+  <body>
+    <div class="header">
+      <img id="bouncing" src="img/bouncing-ball.jpg" alt="bouncing ball" />
+    </div>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class= "active"><img id="bat" src="img/small pingpong icon.jpg" alt="bat icon" /></li>
+          <li class= "active"><a>Let's Play</a></li>
+          <li class= "active" id="clickRules"><a href="#" >Rules</a></li>
+          <li class= "active" id="clickAbout"><a href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+     <div class="page-header">
+       <h1>PING PONG</h1>
+     </div>
+
+     <form class="ping-pong">
+       <div>
+       <h3>Please Enter Your Number Here</h3>
+       <input type="number" min="1" id="inputNumber" placeholder="positive number only!">
+       <button type="submit" class="btn btn-success btn-md">PING PONG!</button>
+       </div>
+     </form>
+
+      <div class="seeoutput">
+       <h3>RESULT</h3>
+       <ul id="showOutput">
+
+       </ul>
+      </div>
+      </div>
+      <div class="Rules">
+       <h3>Rules:</h3>
+       <p>When you enter your number and click "PING-PONG"'s button:</p>
+       <p>Ping Pong will count up to the number from 1 with the following exceptions:</p>
+       <ol>
+         <li>Numbers divisible by 3 become "PING"</li>
+         <li>Numbers divisible by 5 become "PONG"</li>
+         <li>Numbers divisible by 15 become "PING-PONG"</li>
+       </ol>
+      </div>
+      <div class="About">
+        <h3>About Ping Pong</h3>
+        <h4>Language:</h5>
+        <p>Javascript</p>
+        <h4>Created by;</h5>
+        <p>Vichitra Pool</p>
+        <h4>GitHub Username:</h5>
+        <p>Talayruk</p>
+      </div>
+  <div class="Footer">
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+  background-image: url("../img/cupcake1.jpeg");
+  /*background-color: blue;*/
+}
+
+#output{
+  display: none;
+}
+
+.firstValue{
+  font-weight: bold;
+}
