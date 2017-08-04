@@ -13,6 +13,6 @@ public class PartyTest {
     public void runTest_instantiatesCorrectly() throws Exception {
         Party testParty = new Party();
 
-        assertEquals(false, testParty instanceof Party);
+        assertEquals(true, testParty instanceof Party);
     }
 }
