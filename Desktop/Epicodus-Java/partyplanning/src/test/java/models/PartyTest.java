@@ -28,4 +28,5 @@ public class PartyTest {
         Party testParty = new Party(10, "FULL COURSE" , "FULL BAR" , "LIVE BAND");
         assertEquals(3500, testParty.calculateCost());
     }
+
 }
